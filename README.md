@@ -1,3 +1,3 @@
 # ibo7.ru 
 
-[пока все здесь …](PointOfEntry.html)
+[пока все здесь …](docs/PointOfEntry.html)
