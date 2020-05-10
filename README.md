@@ -2,8 +2,3 @@
 
 [пока все здесь …](docs/PointOfEntry.html)
 
-
-
-
-
-
