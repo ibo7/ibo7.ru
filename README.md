@@ -1,3 +1,3 @@
-# ibo7.ru -->
+# ibo7.ru 
 
-[пока все здесь …](https:/aprakos.ru/currentday/)
+[пока все здесь …](https:/ibo7.ru)
