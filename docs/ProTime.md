@@ -16,7 +16,7 @@ Warning:
 
 ### 'РЕШЕНИЕ:'
 
-Укажите в шаблоне свойство - `timeZone`   и инициализируйте это свойство нужной часовой зоной `TimeZone(abbreviation: "GMT")`, в данном примере это зона `GMT`.
+Укажите в шаблоне свойство - `timeZone`   и инициализируйте это свойство нужной часовой зоной `TimeZone(abbreviation: "GMT")`, в данном примере это зона `GMT` и во втором примере `UTS`.
 
 Пример кода:
 
@@ -24,12 +24,28 @@ Warning:
     
 var templateNewDate = DateComponents()
 
-templateNewDate.timeZone = TimeZone(abbreviation: "GMT")
-templateNewDate.day = 22
-templateNewDate.month = 2
-templateNewDate.year = 2022
+// Соответствует текущей системе в компьютере.
+let cal =  Calendar(identifier: current)
 
-print("\n",cal.date(from: templateNewDate)!)
+// НЕ строгая последовательность строк
+
+templateNewDate.day = 22
+templateNewDate.year = 2022
+templateNewDate.month = 2
+templateNewDate.timeZone = TimeZone(abbreviation: "GMT")
+print(cal.date(from: templateNewDate)!)
+
+// Другой синтаксис записи `DateComponents()`
+let templateNewDate2 = DateComponents(
+    
+    // строгая последовательность строк
+    calendar: cal
+    timeZone: TimeZone(abbreviation: "UTS"),
+    year: 2022,
+    month: 2,
+    day: 22
+)
+print(templateNewDate2.date!)
 
 ```
 
